@@ -7,3 +7,9 @@ pessoa = {
 
 print(pessoa)
 print(pessoa['nome'])
+
+pessoa['idade'] = 34
+
+pessoa['profissao'] = 'QA'
+
+print(pessoa)
