@@ -13,3 +13,9 @@ pessoa['idade'] = 34
 pessoa['profissao'] = 'QA'
 
 print(pessoa)
+
+for chave in pessoa:
+    print(chave)
+
+for chave, valor in pessoa.items():
+    print(f'A chave "{chave}" guarda o valor "{valor}".')
