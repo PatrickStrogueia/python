@@ -31,6 +31,7 @@ Os arquivos estão organizados de forma incremental, partindo dos conceitos mais
 
 *   **[funcoes.py](./funcoes.py)**: Declaração de funções com passagem de argumentos, retorno de valores e uso de anotações de tipo (*type hints*).
 *   **[banco.py](./banco.py)**: Implementação completa de conceitos de Orientação a Objetos (Classes, Construtor `__init__`, Métodos, Herança e Polimorfismo) através de uma simulação de contas bancárias (Corrente e Poupança).
+*   **[poo_exemplos.py](./poo_exemplos.py)**: Exemplos avançados e detalhados de POO, abordando Encapsulamento (atributos privados, getters e setters com `@property`), Herança, Polimorfismo, Abstração (classes abstratas com o módulo `abc`) e Métodos Mágicos (*dunder methods* como `__str__`, `__len__`, `__eq__`).
 
 ---
 
