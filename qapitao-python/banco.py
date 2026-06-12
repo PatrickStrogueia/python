@@ -20,12 +20,42 @@ class ContaBancaria:
     def consulta_saldo(self):
         print(f'Saldo atual de {self.titular}: R$ {self.saldo}.')
 
-patrick = ContaBancaria('Patrick', 1000)
-maria = ContaBancaria('Maria', 2000)
+# ContaCorrente está herdando as características de ContaBancaria
+class ContaCorrente(ContaBancaria):
+
+    def sacar(self, valor):
+        taxa = 2
+        total = valor + taxa
+        if valor > self.saldo:
+            print('Saldo insuficiente para saque.')
+        else:
+            self.saldo = self.saldo - total
+            print(f'Saque de R$ {valor} realizado com sucesso. Taxa de R$ {taxa} aplicada.')
+
+# ContaPoupanca está herdando as características de ContaBancaria
+class ContaPoupanca(ContaBancaria):
+
+    def sacar(self, valor):
+        if valor > self.saldo:
+            print('Saldo insuficiente para saque.')
+        else:
+            self.saldo = self.saldo - valor
+            print(f'Saque de R$ {valor} realizado com sucesso.')
+
+patrick = ContaCorrente('Patrick', 1000)
+maria = ContaPoupanca('Maria', 2000)
 
 print(patrick.titular)
 print(patrick.saldo)
 
 patrick.consulta_saldo()
-patrick.depositar(500)
+patrick.sacar(500)
 patrick.consulta_saldo()
+patrick.depositar(100)
+patrick.consulta_saldo()
+
+maria.consulta_saldo()
+maria.sacar(100)
+maria.consulta_saldo()
+maria.depositar(200)
+maria.consulta_saldo()
